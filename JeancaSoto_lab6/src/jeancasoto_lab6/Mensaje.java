@@ -6,11 +6,13 @@ public class Mensaje {
    String emisor;
    String receptor;
    String cuerpo;
+   String asunto;
 
-    public Mensaje(String emisor, String receptor, String cuerpo) {
+    public Mensaje(String emisor, String receptor, String cuerpo, String asunto) {
         this.emisor = emisor;
         this.receptor = receptor;
         this.cuerpo = cuerpo;
+        this.asunto = asunto;
     }
 
     public String getEmisor() {
@@ -37,5 +39,17 @@ public class Mensaje {
         this.cuerpo = cuerpo;
     }
 
+    public String getAsunto() {
+        return asunto;
+    }
+
+    public void setAsunto(String asunto) {
+        this.asunto = asunto;
+    }
+   
+   
+   
+   
+    
 
 }

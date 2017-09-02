@@ -68,7 +68,7 @@ public class AdminPersona {
                bw.write(t.getApellido()+";");
                bw.write(t.getCorreo()+";");
                bw.write(t.getPais()+";");
-               bw.write(t.getFecha().getDate()+"/"+t.getFecha().getMonth()+"/"+t.getFecha().getYear()+";");
+               bw.write(t.getFecha().toString());
                bw.write(t.getNumero()+";");
                bw.write(t.getPassword()+";");
             }
@@ -90,7 +90,8 @@ public class AdminPersona {
                 sc = new Scanner(archivo);
                 sc.useDelimiter(";");
                 while (sc.hasNext()) {
-                    //listapersonas.add(new Persona(sc.nextInt(), sc.next(), sc.nextInt()));
+                    listapersonas.add(new Persona(sc.next(), sc.next(), sc.next(),sc.next(), sc.next(),
+                           sc.next(), sc.next()));
 
                 }
             } catch (Exception e) {

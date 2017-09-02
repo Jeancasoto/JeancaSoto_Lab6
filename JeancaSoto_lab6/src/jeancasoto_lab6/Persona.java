@@ -9,7 +9,7 @@ public class Persona {
     String nombre;
     String apellido;
     String correo;
-    Date fecha;
+    String fecha;
     String pais;
     String numero;
     String password;
@@ -26,7 +26,7 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, String correo, Date fecha, String pais, String numero, String password) {
+    public Persona(String nombre, String apellido, String correo, String fecha, String pais, String numero, String password) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
@@ -60,11 +60,11 @@ public class Persona {
         this.correo = correo;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

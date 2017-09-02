@@ -108,6 +108,19 @@ public class Principal extends javax.swing.JFrame {
         jTable8 = new javax.swing.JTable();
         jButton27 = new javax.swing.JButton();
         jButton28 = new javax.swing.JButton();
+        crearordinario = new javax.swing.JDialog();
+        jLabel30 = new javax.swing.JLabel();
+        cb_deordinario = new javax.swing.JComboBox();
+        cb_paraordinario = new javax.swing.JComboBox();
+        tf_asunto1 = new javax.swing.JTextField();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        ta_texto1 = new javax.swing.JTextArea();
+        jButton29 = new javax.swing.JButton();
+        jButton30 = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         tf_correo_login = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -816,6 +829,95 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
+        jLabel30.setFont(new java.awt.Font("Marker Felt", 3, 48)); // NOI18N
+        jLabel30.setText("Crear mensaje");
+
+        cb_deordinario.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " " }));
+
+        ta_texto1.setColumns(20);
+        ta_texto1.setRows(5);
+        jScrollPane10.setViewportView(ta_texto1);
+
+        jButton29.setText("Enviar");
+        jButton29.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton29MouseClicked(evt);
+            }
+        });
+
+        jButton30.setText("Guardar borrador");
+
+        jLabel31.setText("De:");
+
+        jLabel32.setText("Para:");
+
+        jLabel33.setText("Asunto:");
+
+        jLabel34.setText("Texto:");
+
+        javax.swing.GroupLayout crearordinarioLayout = new javax.swing.GroupLayout(crearordinario.getContentPane());
+        crearordinario.getContentPane().setLayout(crearordinarioLayout);
+        crearordinarioLayout.setHorizontalGroup(
+            crearordinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(crearordinarioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(crearordinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel31)
+                    .addComponent(jLabel32)
+                    .addComponent(jLabel33)
+                    .addComponent(jLabel34))
+                .addContainerGap(438, Short.MAX_VALUE))
+            .addGroup(crearordinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(crearordinarioLayout.createSequentialGroup()
+                    .addGap(28, 28, 28)
+                    .addGroup(crearordinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(crearordinarioLayout.createSequentialGroup()
+                            .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(51, 51, 51)
+                            .addComponent(jButton30))
+                        .addGroup(crearordinarioLayout.createSequentialGroup()
+                            .addGap(30, 30, 30)
+                            .addGroup(crearordinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane10)
+                                .addComponent(cb_paraordinario, 0, 313, Short.MAX_VALUE)
+                                .addComponent(tf_asunto1)
+                                .addComponent(cb_deordinario, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(crearordinarioLayout.createSequentialGroup()
+                            .addGap(60, 60, 60)
+                            .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(122, Short.MAX_VALUE)))
+        );
+        crearordinarioLayout.setVerticalGroup(
+            crearordinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(crearordinarioLayout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(jLabel31)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel32)
+                .addGap(29, 29, 29)
+                .addComponent(jLabel33)
+                .addGap(28, 28, 28)
+                .addComponent(jLabel34)
+                .addContainerGap(239, Short.MAX_VALUE))
+            .addGroup(crearordinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(crearordinarioLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel30)
+                    .addGap(8, 8, 8)
+                    .addComponent(cb_deordinario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(cb_paraordinario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(18, 18, 18)
+                    .addComponent(tf_asunto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(18, 18, 18)
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(20, 20, 20)
+                    .addGroup(crearordinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton29)
+                        .addComponent(jButton30))
+                    .addContainerGap(46, Short.MAX_VALUE)))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Correo electronico");
@@ -1058,26 +1160,72 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-
-        if (rootPaneCheckingEnabled) {
+        //try {
+            String token[] = tf_correo_login.getText().split("@");
+        String u = token[1];
+        System.out.println(u);
+        if (tf_correo_login.getText().contains("@unitec.edu")) {
+            jd_inicio.setModal(true);
+            jd_inicio.pack();
+            jd_inicio.setLocationRelativeTo(this);
+            jd_inicio.setVisible(true);
             
+            
+                     Persona x = (new Persona(tf_nombre.getText(), tf_apellido.getText(), tf_correo.getText(), dc_fecha.getDate().toString(), cb_nacionalidad.getSelectedItem().toString(),
+                            tf_telefono.getText(), pf_contra1.getText()));
+                    lista.add(x);
+
+                    DefaultComboBoxModel modelo1 = (DefaultComboBoxModel) cb_de.getModel();
+                    modelo1.addElement(x);
+                    cb_de.setModel(modelo1);
+
+                    DefaultComboBoxModel modelo2 = (DefaultComboBoxModel) cb_para.getModel();
+                    modelo2.addElement(x);
+                    cb_para.setModel(modelo2);
+
+        } else {
+            /*
+             jd_inicio.setModal(true);
+            jd_inicio.pack();
+            jd_inicio.setLocationRelativeTo(this);
+            jd_inicio.setVisible(true);
+             */
+           
+            crearordinario.setModal(true);
+            crearordinario.pack();
+            crearordinario.setLocationRelativeTo(this);
+            crearordinario.setVisible(true);
+           
+
+            Persona x = (new Persona(tf_nombre.getText(), tf_apellido.getText(), tf_correo.getText(), dc_fecha.getDate().toString(), cb_nacionalidad.getSelectedItem().toString(),
+                    tf_telefono.getText(), pf_contra1.getText()));
+            lista.add(x);
+
+            DefaultComboBoxModel modelo1 = (DefaultComboBoxModel) cb_deordinario.getModel();
+            modelo1.addElement(x);
+            cb_deordinario.setModel(modelo1);
+
+            DefaultComboBoxModel modelo2 = (DefaultComboBoxModel) cb_paraordinario.getModel();
+            modelo2.addElement(x);
+            cb_paraordinario.setModel(modelo2);
         }
-        jd_inicio.setModal(true);
-        jd_inicio.pack();
-        jd_inicio.setLocationRelativeTo(this);
-        jd_inicio.setVisible(true);
-        
-        
+       // } catch (Exception e) {
+       //     JOptionPane.showMessageDialog(jd_inicio, "Algo salio mal");
+       // }
+
+
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         try {
+
             if (pf_contra1.getText().equals(pf_contra2.getText())) {
+
                 String token[] = tf_correo.getText().split("@");
                 String u = token[0];
                 AdminPersona ap = new AdminPersona("./" + u + ".txt");
                 ap.cargararchivo();
-                ap.getListapersonas().add(new Persona(tf_nombre.getText(), tf_apellido.getText(), tf_correo.getText(), dc_fecha.getDate(), cb_nacionalidad.getSelectedItem().toString(),
+                ap.getListapersonas().add(new Persona(tf_nombre.getText(), tf_apellido.getText(), tf_correo.getText(), dc_fecha.getDate().toString(), cb_nacionalidad.getSelectedItem().toString(),
                         tf_telefono.getText(), pf_contra1.getText()));
 
                 ap.escribirArchivo(tf_nombre.getText(), tf_apellido.getText(), tf_correo.getText(), cb_nacionalidad.getSelectedItem().toString(),
@@ -1092,6 +1240,43 @@ public class Principal extends javax.swing.JFrame {
                 tf_telefono.setText("");
                 pf_contra1.setText("");
                 pf_contra2.setText("");
+
+                if (tf_correo_login.getText().contains("@unitec.edu")) {
+                    jd_inicio.setModal(true);
+                    jd_inicio.pack();
+                    jd_inicio.setLocationRelativeTo(this);
+                    jd_inicio.setVisible(true);
+                    
+                     Persona x = (new Persona(tf_nombre.getText(), tf_apellido.getText(), tf_correo.getText(), dc_fecha.getDate().toString(), cb_nacionalidad.getSelectedItem().toString(),
+                            tf_telefono.getText(), pf_contra1.getText()));
+                    lista.add(x);
+
+                    DefaultComboBoxModel modelo1 = (DefaultComboBoxModel) cb_de.getModel();
+                    modelo1.addElement(x);
+                    cb_de.setModel(modelo1);
+
+                    DefaultComboBoxModel modelo2 = (DefaultComboBoxModel) cb_para.getModel();
+                    modelo2.addElement(x);
+                    cb_para.setModel(modelo2);
+
+                } else {
+                    crearordinario.setModal(true);
+                    crearordinario.pack();
+                    crearordinario.setLocationRelativeTo(this);
+                    crearordinario.setVisible(true);
+
+                    Persona x = (new Persona(tf_nombre.getText(), tf_apellido.getText(), tf_correo.getText(), dc_fecha.getDate().toString(), cb_nacionalidad.getSelectedItem().toString(),
+                            tf_telefono.getText(), pf_contra1.getText()));
+                    lista.add(x);
+
+                    DefaultComboBoxModel modelo1 = (DefaultComboBoxModel) cb_deordinario.getModel();
+                    modelo1.addElement(x);
+                    cb_deordinario.setModel(modelo1);
+
+                    DefaultComboBoxModel modelo2 = (DefaultComboBoxModel) cb_paraordinario.getModel();
+                    modelo2.addElement(x);
+                    cb_paraordinario.setModel(modelo2);
+                }
             } else {
                 JOptionPane.showMessageDialog(jd_inicio, "Password no coinciden");
                 tf_nombre.setText("");
@@ -1102,23 +1287,27 @@ public class Principal extends javax.swing.JFrame {
                 pf_contra1.setText("");
                 pf_contra2.setText("");
             }
-            Persona x = (new Persona(tf_nombre.getText(), tf_apellido.getText(), tf_correo.getText(), dc_fecha.getDate(), cb_nacionalidad.getSelectedItem().toString(),
-                    tf_telefono.getText(), pf_contra1.getText()));
-            lista.add(x);
-
-            DefaultComboBoxModel modelo1 = (DefaultComboBoxModel) cb_de.getModel();
-            modelo1.addElement(x);
-            cb_de.setModel(modelo1);
-
-            DefaultComboBoxModel modelo2 = (DefaultComboBoxModel) cb_para.getModel();
-            modelo2.addElement(x);
-            cb_para.setModel(modelo2);
+            String token[] = tf_correo.getText().split("@");
+            String u = token[1];
 
         } catch (Exception e) {
         }
 
 
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton29MouseClicked
+       
+        
+        String s=cb_paraordinario.getSelectedItem().toString();
+        for (int i = 0; i < lista.size(); i++) {
+            if (lista.get(i).equals(s)) {
+            //    lista.get(i).noleido.add(cb_deordinario.getSelectedItem().);
+            }
+        }
+       
+       
+    }//GEN-LAST:event_jButton29MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1158,9 +1347,12 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog borradores;
     private javax.swing.JComboBox cb_de;
+    private javax.swing.JComboBox cb_deordinario;
     private javax.swing.JComboBox cb_nacionalidad;
     private javax.swing.JComboBox cb_para;
+    private javax.swing.JComboBox cb_paraordinario;
     private javax.swing.JDialog crear;
+    private javax.swing.JDialog crearordinario;
     private com.toedter.calendar.JDateChooser dc_fecha;
     private javax.swing.JDialog eliminados;
     private javax.swing.JDialog enviados;
@@ -1186,7 +1378,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -1216,6 +1410,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1224,6 +1423,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -1249,8 +1449,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPasswordField pf_contra_login;
     private javax.swing.JDialog spam;
     private javax.swing.JTextArea ta_texto;
+    private javax.swing.JTextArea ta_texto1;
     private javax.swing.JTextField tf_apellido;
     private javax.swing.JTextField tf_asunto;
+    private javax.swing.JTextField tf_asunto1;
     private javax.swing.JTextField tf_correo;
     private javax.swing.JTextField tf_correo_login;
     private javax.swing.JTextField tf_nombre;
